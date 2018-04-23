@@ -1,0 +1,21 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+	PetZee!!-Contact Us
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-4" style="padding-top: 40px; color: black">
+				{% for doctors in docs %}
+					<h2 style="text-decoration: underline;">{{ doctors.name }}</h2>
+					<h6>{{ doctors.spec }}</h6>
+					<h6>{{ doctors.email }}</h6>
+					<h6 style="padding-bottom: 20px;">{{ doctors.phone }}</h6>
+				{% endfor %}
+			</div>
+		</div>	
+	</div>
+
+{% endblock %}

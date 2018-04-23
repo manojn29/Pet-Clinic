@@ -1,0 +1,40 @@
+body{
+    background-image: url(dog1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0f121f;
+    color: #fff;
+}
+
+body *{
+    font-family: Ubuntu;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.padtop{
+  padding-left: 50px;
+	padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.nav1{
+  color: white;
+  font-size: 18px;
+}
+
+.padblog{
+  padding-left: 500px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.image{
+  background-image: url(dog2.jpeg);
+}
