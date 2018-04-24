@@ -27,6 +27,7 @@
 				    <div class="navbar-nav">
 				      <a class="nav-item nav-link" href="/about" style="color: white;">Home <span class="sr-only">(current)</span></a>
 				      <a class="nav-item nav-link" href="/" style="color: white;">About</a>
+				      <a class="nav-item nav-link" href="/appointment" style="color: white;">Appointment</a>
 				      <a class="nav-item nav-link" href="/blog" style="color: white;">Blog</a>
 				      <a class="nav-item nav-link" href="/services" style="color: white;">Services</a>
 				      <a class="nav-item nav-link" href="/links" style="color: white;">Links</a>
@@ -34,6 +35,9 @@
 				   </div>
 				 </div>
 			</div>
+			<form class="form-inline my-2 my-lg-0 logout-link" action="{% url 'accounts:logout' %}" method="post">{% csrf_token %}
+		     	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+		    </form>
 		</nav>
 		{% block content %}
 		{% endblock %}
