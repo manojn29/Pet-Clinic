@@ -34,10 +34,22 @@
 				      <a class="nav-item nav-link" href="/contact" style="color: white;">Contact Us</a>
 				   </div>
 				 </div>
+				 <!-- {% if user.is_authenticated %} -->
+			<!-- <h1>Welcome {{ homepage.author.username }}</h1> -->
+			<!-- {% endif %} -->
 			</div>
+			{% if user.is_authenticated %}
 			<form class="form-inline my-2 my-lg-0 logout-link" action="{% url 'accounts:logout' %}" method="post">{% csrf_token %}
 		     	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
 		    </form>
+		    {% else %}
+		    <form class="form-inline my-2 my-lg-0 logout-link" action="{% url 'accounts:login' %}" method="post">{% csrf_token %}
+		     	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+		    </form>
+		    <form class="form-inline my-2 my-lg-0 logout-link" action="{% url 'accounts:signup' %}" method="post">{% csrf_token %}
+		     	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Signup</button>
+		    </form>
+		    {% endif %}
 		</nav>
 		{% block content %}
 		{% endblock %}

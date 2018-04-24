@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import blog, contacts
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 def homepage(request):
@@ -25,7 +26,8 @@ def links(request):
 
 @login_required(login_url="/accounts/login/")
 def appointment(request):
-	return render(request, 'homepage/appointment.html')
+	form = forms.CreateAppoint(request.POST, request.FILES)
+	return render(request, 'homepage/appointment.html', {'from':form})
 
 def azar(request):
 	return render(request, 'homepage/azhar.html')

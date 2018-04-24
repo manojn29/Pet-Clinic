@@ -21,3 +21,7 @@ class contacts(models.Model):
 	def __str__(self):
 		return self.name
 		
+
+class appoint(models.Model):
+	uemail = models.EmailField()
+	pet = models.CharField(max_length = 25)
