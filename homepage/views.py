@@ -20,3 +20,6 @@ def services(request):
 
 def links(request):
 	return render(request, 'homepage/links.html')
+
+def azar(request):
+	return render(request, 'homepage/azhar.html')

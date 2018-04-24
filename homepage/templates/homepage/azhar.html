@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+{% load static from staticfiles %}
+
+<html>
+    <head>
+        <!-- <link href="azhar.css" rel="stylesheet"/> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- <script src="JQUERY%20Main.js"></script> -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+   $("#signup-btn").click(function(){
+      $("#main").animate({left:"22.5%"},400);
+      $("#main").animate({left:"30%"},500);
+      $("#loginform").css("visibility","hidden");
+      $("#loginform").animate({left:"25%"},400);
+
+      $("#signupform").animate({left:"17%"},400);
+      $("#signupform").animate({left:"30%"},500);
+      $("#signupform").css("visibility","visible");
+  
+   });
+
+$("#login-btn").click(function(){
+    $("#main").animate({left:"77.5%"},400);
+    $("#main").animate({left:"70%"},500);
+
+    $("#signupform").css("visibility","hidden");
+    $("#signupform").animate({left:"75%"},400);
+
+    $("#loginform").animate({left:"83.5%"},400);
+    $("#loginform").animate({left:"70%"},500);
+    $("#loginform").css("visibility","visible");
+
+    });
+});
+
+        </script>
+        
+
+
+<link rel="stylesheet" href="{% static 'azar.css' %}">
+    </head>
+    <body>
+        <div id="box">
+            <div id="main"></div>
+
+            <div id="loginform">
+               <h1>LOGIN</h1>
+               <input type="email" name="" id="" placeholder="Email"/><br>
+               <input type="password" name="" id="" placeholder="Password"/><br>
+               <button>LOGIN</button>
+            </div>
+
+            <div id="signupform">
+                <h1> SIGN UP </h1>
+                <input type="text" name="" id="" placeholder="Full Name"/><br>
+                <input type="email" name="" id="" placeholder="Email"/><br>
+                <input type="password" name="" id="" placeholder="Enter Password"><br>
+                <input type="password" name="" id="" placeholder="Re-enter password"/><br>
+                <button>SIGN UP</button>
+            </div>
+
+            <div id="login-msg"> Have an account? </div>
+            <div id="signup-msg"> Don't have an account? </div>
+            
+            <button id="login-btn"> LOGIN </button>
+            <button id="signup-btn"> SIGN UP </button>
+
+
+        </div>
+    </body>
+</html>
