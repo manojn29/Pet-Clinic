@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class blog(models.Model):
@@ -25,3 +26,8 @@ class contacts(models.Model):
 class appoint(models.Model):
 	uemail = models.EmailField()
 	pet = models.CharField(max_length = 25)
+	
+"""
+class appoint2(models.Model):
+	author = models.ForeignKey(User, default=None, on_delete=models.CASCADE,)
+"""
