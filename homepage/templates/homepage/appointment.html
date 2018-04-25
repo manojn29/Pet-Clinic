@@ -4,12 +4,14 @@
 	Appointment
 {% endblock %}
 
-{% block content %}  
-	<div class="appoint">
-		<h1>Book your appointment here...</h1>
-		 <form class="site-form" action="{% url 'homepage:appointment' %}" method="post">{% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Create">
-        </form>
+{% block content %}
+	<div class="container">
+		<div class="appoint">
+			<h1>Book your appointment here...</h1>
+			 <form class="site-form" action="{% url 'homepage:appointment' %}" method="post">{% csrf_token %}
+	            {{ form }}
+	            <input type="submit" value="Create">
+	        </form>
+		</div>
 	</div>
 {% endblock %}
